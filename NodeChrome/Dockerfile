@@ -51,7 +51,7 @@ RUN CD_VERSION=$(if [ ${CHROME_DRIVER_VERSION:-latest} = "latest" ]; then echo $
   && chmod 755 /opt/selenium/chromedriver-$CD_VERSION \
   && sudo ln -fs /opt/selenium/chromedriver-$CD_VERSION /usr/bin/chromedriver
 
-COPY generate_config /opt/bin/generate_config
+# COPY generate_config /opt/bin/generate_config
 
-# Generating a default config during build time
-RUN /opt/bin/generate_config > /opt/selenium/config.json
+# # Generating a default config during build time
+# RUN /opt/bin/generate_config > /opt/selenium/config.json
